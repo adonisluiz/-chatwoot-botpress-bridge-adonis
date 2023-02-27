@@ -7,12 +7,12 @@ class Chatwoot::SendToBotpress < Micro::Case
 
   def call!
     conversation_id = event['conversation']['id']
-    contact_id = event['id']
+    
     message_content = event['content']
     url = "#{botpress_endpoint}/api/v1/bots/#{botpress_bot_id}/converse/#{conversation_id}"
 
     body = {
-      'contato_id':"#{contact_id}",
+      
       'text': "#{message_content}",
       'type': 'text',
       'metadata': {
