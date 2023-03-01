@@ -35,8 +35,7 @@ class Chatwoot::SendToChatwoot < Micro::Case
         body: { 
                 
                 content: botpress_response['image'],
-                message_type: incoming,
-                file_type: upload_file(botpress_response['text'])
+               
         }
           
           
