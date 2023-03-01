@@ -16,7 +16,7 @@ class Chatwoot::SendToChatwoot < Micro::Case
         chatwoot_endpoint: chatwoot_endpoint, chatwoot_bot_token: chatwoot_bot_token,
         body: build_choise_options_body(botpress_response)
       )
-    else
+    elsif botpress_response['type'] == 'text'
       return Chatwoot::SendToChatwootRequest.call(
         account_id: account_id, conversation_id: conversation_id, 
         chatwoot_endpoint: chatwoot_endpoint, chatwoot_bot_token: chatwoot_bot_token,
