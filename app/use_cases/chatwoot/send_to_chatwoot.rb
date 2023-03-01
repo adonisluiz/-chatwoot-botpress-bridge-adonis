@@ -32,7 +32,7 @@ class Chatwoot::SendToChatwoot < Micro::Case
         account_id: account_id, conversation_id: conversation_id, 
         chatwoot_endpoint: chatwoot_endpoint, chatwoot_bot_token: chatwoot_bot_token,
         
-        body: {  body = list(
+         body = list(
             'attachments[]' = upload_file(botpress_response['image']),
             'content' = 'test audio',
             'message_type' = 'incoming',
@@ -40,7 +40,7 @@ class Chatwoot::SendToChatwoot < Micro::Case
             )
           
           
-        }
+        
                 
         
       )
