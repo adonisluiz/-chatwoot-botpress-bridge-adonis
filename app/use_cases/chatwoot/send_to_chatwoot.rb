@@ -27,22 +27,19 @@ class Chatwoot::SendToChatwoot < Micro::Case
         
       )
       elsif botpress_response['type'] == 'image'
-     
-      return Chatwoot::SendToChatwootRequest.call(
-        account_id: account_id, conversation_id: conversation_id, 
-        chatwoot_endpoint: chatwoot_endpoint, chatwoot_bot_token: chatwoot_bot_token,
-        
-         body = list(
+      body = list(
             'attachments[]' : upload_file(botpress_response['image']),
             'content' : 'test audio',
             'message_type' : 'incoming',
             'file_type' : botpress_response['text']
             )
+      return Chatwoot::SendToChatwootRequest.call(
+        account_id: account_id, conversation_id: conversation_id, 
+        chatwoot_endpoint: chatwoot_endpoint, chatwoot_bot_token: chatwoot_bot_token,
+        
+        body: body
           
           
-        
-                
-        
       )
       
     end
