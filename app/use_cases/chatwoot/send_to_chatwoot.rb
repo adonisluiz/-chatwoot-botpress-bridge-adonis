@@ -1,5 +1,5 @@
 require 'faraday'
-library(httr)
+
 
 class Chatwoot::SendToChatwoot < Micro::Case
   attributes :event
