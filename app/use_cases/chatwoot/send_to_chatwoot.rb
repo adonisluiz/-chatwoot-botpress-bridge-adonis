@@ -31,7 +31,7 @@ class Chatwoot::SendToChatwoot < Micro::Case
         chatwoot_endpoint: chatwoot_endpoint, chatwoot_bot_token: chatwoot_bot_token,
         
         body: { 
-          attachments[]: botpress_response['image'] }
+          'attachments[]': botpress_response['image'] }
                 
         
       )
