@@ -33,7 +33,7 @@ class Chatwoot::SendToChatwoot < Micro::Case
         chatwoot_endpoint: chatwoot_endpoint, chatwoot_bot_token: chatwoot_bot_token,
         
         body: { 
-                attachments: upload_file(botpress_response['image'],
+                attachments[]: upload_file(botpress_response['image'],
                 content: botpress_response['image'],
                 message_type: incoming,
                 file_type: upload_file(botpress_response['text'])
