@@ -34,7 +34,7 @@ class Chatwoot::SendToChatwoot < Micro::Case
                 
         
       )
-    end
+      end
     end
   end
 
