@@ -30,7 +30,7 @@ class Chatwoot::SendToChatwoot < Micro::Case
         account_id: account_id, conversation_id: conversation_id, 
         chatwoot_endpoint: chatwoot_endpoint, chatwoot_bot_token: chatwoot_bot_token,
         
-        body: { content: 'imagem' }
+        body: { content: botpress_response['image'] }
                 
         
       )
