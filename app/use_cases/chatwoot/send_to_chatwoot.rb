@@ -32,12 +32,9 @@ class Chatwoot::SendToChatwoot < Micro::Case
         account_id: account_id, conversation_id: conversation_id, 
         chatwoot_endpoint: chatwoot_endpoint, chatwoot_bot_token: chatwoot_bot_token,
         
-        body: {
-            
-            'content' : botpress_response['image'],
-            'message_type' : 'incoming',
-            'file_type' : botpress_response['text']        
-        
+        body: { content: botpress_response['image'],
+                message_type: incoming,
+                file_type: upload_file(botpress_response['text'])
         }
           
           
