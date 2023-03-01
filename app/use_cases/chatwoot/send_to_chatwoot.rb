@@ -20,7 +20,10 @@ class Chatwoot::SendToChatwoot < Micro::Case
       return Chatwoot::SendToChatwootRequest.call(
         account_id: account_id, conversation_id: conversation_id, 
         chatwoot_endpoint: chatwoot_endpoint, chatwoot_bot_token: chatwoot_bot_token,
-        body: { content: botpress_response['text'] }
+        if(botpress_response['type'] == 'text'){
+          body: { content: botpress_response['text'] }
+        }        
+        
       )
     end
   end
